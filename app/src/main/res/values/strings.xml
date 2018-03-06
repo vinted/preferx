@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Android Preferences</string>
+    <string name="launch_count">Activity was started %d times</string>
+</resources>
