@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".RxActivityExample" />
         <activity android:name=".DaggerActivityExample" />
+        <activity android:name=".ObjectPreferenceExample" />
     </application>
 
 </manifest>

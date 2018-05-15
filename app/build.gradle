@@ -40,6 +40,7 @@ dependencies {
     implementation Libs.constraint_layout
     implementation Libs.dagger
     implementation Libs.rx_java_2
+    implementation Libs.gson
     kapt Libs.dagger_compiler
 
     testImplementation Libs.junit

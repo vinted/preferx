@@ -10,7 +10,7 @@ class EntityPrefSerializerTest {
 
     private val prefs: SharedPreferences = mock()
     private val editor: SharedPreferences.Editor = mock()
-    private val serializer = mock<EntitySerializer<Int>>()
+    private val serializer = mock<PreferxSerializer>()
     private val value = 1
     private val key = "foo"
 

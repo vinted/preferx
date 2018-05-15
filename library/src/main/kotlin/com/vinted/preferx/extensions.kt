@@ -21,7 +21,7 @@ fun SharedPreferences.longPreference(name: String, defaultValue: Long): LongPref
 fun <T : Any> SharedPreferences.objectPreference(
         name: String,
         defaultValue: T,
-        serializer: EntitySerializer<T>,
+        serializer: PreferxSerializer,
         clazz: Class<T>
 ): ObjectPreference<T> {
     return ObjectPreferenceImpl(this, name, defaultValue, serializer, clazz)

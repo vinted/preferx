@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.content.SharedPreferences
 import io.reactivex.Observable
 
-abstract class BasePreferenceImpl<T> protected constructor(
+abstract class BasePreferenceImpl<T> internal constructor(
         private val preferences: SharedPreferences,
         private val key: String,
         private val defaultValue: T,

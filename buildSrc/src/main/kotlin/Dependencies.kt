@@ -9,6 +9,7 @@ object Versions {
     const val mockito = "2.13.0"
     const val mockito_kotlin = "1.5.0"
     const val dagger = "2.14.1"
+    const val gson = "2.8.4"
 
     const val compileSdkVersion = 27
     const val minSdkVersion = 16
@@ -33,4 +34,5 @@ object Libs {
     const val dagger = "com.google.dagger:dagger:${Versions.dagger}"
     const val dagger_compiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
     const val mockito_kotlin = "com.nhaarman:mockito-kotlin:${Versions.mockito_kotlin}"
+    const val gson = "com.google.code.gson:gson:${Versions.gson}"
 }
