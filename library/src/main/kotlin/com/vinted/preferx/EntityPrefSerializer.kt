@@ -21,17 +21,12 @@ class EntityPrefSerializer<T : Any>(
 
         val cachedValue = cached?.get()
 
-        return if (cachedValue != null && cachedValue.string == string) {
-            cachedValue.value
-        } else {
-            val value = serializer.fromString(string, clazz) as? T
+        if (cachedValue != null && cachedValue.string == string) return cachedValue.value
+        if (string.isEmpty()) return default
 
-            if (value != null) {
-                cached = SoftReference(Cache(value, string))
-            }
-
-            value ?: default
-        }
+        val value = serializer.fromString(string, clazz)!!
+        cached = SoftReference(Cache(value as T, string))
+        return value
     }
 
     private class Cache<out T>(val value: T, val string: String)
