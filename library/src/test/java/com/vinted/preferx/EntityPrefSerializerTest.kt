@@ -10,7 +10,7 @@ class EntityPrefSerializerTest {
 
     private val prefs: SharedPreferences = mock()
     private val editor: SharedPreferences.Editor = mock()
-    private val serializer = mock<EntitySerializer<Int>>()
+    private val serializer = mock<PreferxSerializer>()
     private val value = 1
     private val key = "foo"
 
@@ -94,4 +94,16 @@ class EntityPrefSerializerTest {
 
         assertEquals(234, value)
     }
+
+    @Test(expected = ClassCastException::class)
+    fun testDeserialize_noCache_wrongType_crash() {
+        val serializedValue = "1"
+        val deserializedValue = Foo()
+        whenever(prefs.getString(any(), any())).thenReturn(serializedValue)
+        whenever(serializer.fromString(any(), any())).then { deserializedValue }
+
+        println(fixture.deserialize(prefs, key, 123))
+    }
+
+    internal class Foo
 }

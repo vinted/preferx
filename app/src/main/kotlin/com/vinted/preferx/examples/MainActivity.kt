@@ -18,5 +18,9 @@ class MainActivity : AppCompatActivity() {
         dagger_example.setOnClickListener {
             startActivity(Intent(this, DaggerActivityExample::class.java))
         }
+
+        object_example.setOnClickListener {
+            startActivity(Intent(this, ObjectPreferenceExample::class.java))
+        }
     }
 }
