@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/com.vinted/preferx.svg)](https://jitpack.io/#com.vinted/preferx)
+
 # PrefeRx
 
 This is a reactive SharedPreferences library for Kotlin
