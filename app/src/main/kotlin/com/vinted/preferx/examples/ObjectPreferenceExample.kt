@@ -15,15 +15,16 @@ class ObjectPreferenceExample : Activity() {
         getSharedPreferences("app-preferences", Context.MODE_PRIVATE)
     }
 
-    private val serializer by lazy {
-        GsonSerializer(Gson())
+    private val gson by lazy {
+        Gson()
     }
+
 
     private val objectPreference by lazy {
         sharedPreferences.objectPreference(
                 name = "foo",
                 defaultValue = Foo(bar = 0L),
-                serializer = serializer,
+                serializer = GsonSerializer(gson),
                 clazz = Foo::class.java
         )
     }
@@ -51,15 +52,14 @@ class ObjectPreferenceExample : Activity() {
 
     internal data class Foo(val bar: Long)
 
-    internal class GsonSerializer(
+    internal class GsonSerializer<T : Any>(
             private val gson: Gson
-    ) : PreferxSerializer {
-
-        override fun toString(value: Any): String {
-            return gson.toJson(value)
+    ) : PreferxSerializer<T> {
+        override fun toString(value: T, type: Type): String {
+            return gson.toJson(value, type)
         }
 
-        override fun fromString(string: String, type: Type): Any? {
+        override fun fromString(string: String, type: Type): T {
             return gson.fromJson(string, type)
         }
     }
