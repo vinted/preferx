@@ -10,7 +10,7 @@ class EntityPrefSerializerTest {
 
     private val prefs: SharedPreferences = mock()
     private val editor: SharedPreferences.Editor = mock()
-    private val serializer = mock<PreferxSerializer>()
+    private val serializer = mock<PreferxSerializer<Int>>()
     private val value = 1
     private val key = "foo"
 
@@ -18,7 +18,7 @@ class EntityPrefSerializerTest {
 
     @Before
     fun setUp() {
-        whenever(serializer.toString(any()))
+        whenever(serializer.toString(any(), any()))
                 .then {
                     it.arguments[0].toString()
                 }

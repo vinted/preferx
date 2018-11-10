@@ -6,7 +6,7 @@ class ObjectPreferenceImpl<T : Any>(
         prefs: SharedPreferences,
         key: String,
         default: T,
-        serializer: PreferxSerializer,
+        serializer: PreferxSerializer<T>,
         clazz: Class<T>
 ) : BasePreferenceImpl<T>(
         prefs,

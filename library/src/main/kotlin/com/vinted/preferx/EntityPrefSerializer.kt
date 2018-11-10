@@ -4,14 +4,14 @@ import android.content.SharedPreferences
 import java.lang.ref.SoftReference
 
 class EntityPrefSerializer<T : Any>(
-        private val serializer: PreferxSerializer,
+        private val serializer: PreferxSerializer<T>,
         private val clazz: Class<T>
 ) : Serializer<T> {
 
     private var cached: SoftReference<Cache<T>>? = null
 
     override fun serialize(storage: SharedPreferences.Editor, key: String, value: T) {
-        val string = serializer.toString(value)
+        val string = serializer.toString(value, clazz)
         cached = SoftReference(Cache(value, string))
         storage.putString(key, string)
     }
@@ -24,8 +24,8 @@ class EntityPrefSerializer<T : Any>(
         if (cachedValue != null && cachedValue.string == string) return cachedValue.value
         if (string.isEmpty()) return default
 
-        val value = serializer.fromString(string, clazz)!!
-        cached = SoftReference(Cache(value as T, string))
+        val value = serializer.fromString(string, clazz)
+        cached = SoftReference(Cache(value, string))
         return value
     }
 
