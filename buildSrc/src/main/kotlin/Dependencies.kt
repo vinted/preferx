@@ -16,7 +16,7 @@ object Versions {
     const val targetSdkVersion = 27
 
     private const val major = 1
-    private const val minor = 0
+    private const val minor = 2
     private const val patch = 0
 
     const val versionCode: Int = (major * 10000) + (minor * 100) + patch

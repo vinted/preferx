@@ -12,7 +12,7 @@ Download
 
 ```groovy
 dependencies {
-  implementation 'com.vinted:preferx:1.1.0'
+  implementation 'com.vinted:preferx:1.2.0'
 }
 ```
 
