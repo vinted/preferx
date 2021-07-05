@@ -1,22 +1,22 @@
 package com.vinted.preferx.examples
 
-import com.nhaarman.mockito_kotlin.doReturn
-import com.nhaarman.mockito_kotlin.whenever
 import kotlinx.android.synthetic.main.activity_dagger.*
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.kotlin.doReturn
+import org.mockito.kotlin.whenever
 import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import javax.inject.Inject
 
-
 @RunWith(RobolectricTestRunner::class)
-@Config(constants = BuildConfig::class,
-        application = TestPrefApplication::class)
+@Config(
+    application = TestPrefApplication::class
+)
 class DaggerActivityExampleTest {
 
     @Inject

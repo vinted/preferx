@@ -19,7 +19,7 @@ class StringPreferenceImpl(
         }
 
         override fun deserialize(source: SharedPreferences, key: String, default: String): String {
-            return source.getString(key, default)
+            return source.getString(key, default)!!
         }
     }
 }

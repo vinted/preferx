@@ -1,10 +1,10 @@
 package com.vinted.preferx
 
 import android.content.SharedPreferences
-import com.nhaarman.mockito_kotlin.*
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
+import org.mockito.kotlin.*
 
 class EntityPrefSerializerTest {
 
