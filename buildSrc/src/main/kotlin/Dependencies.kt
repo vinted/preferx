@@ -1,8 +1,8 @@
 object Versions {
     const val android_gradle_plugin = "4.2.0"
     const val kotlin = "1.5.10"
-    const val app_compat = "26.1.0"
-    const val constraint_layout = "1.0.2"
+    const val app_compat = "1.3.0"
+    const val constraint_layout = "2.0.4"
     const val rx_java_2 = "2.2.19"
     const val junit = "4.12"
     const val robolectric = "4.5.1"
@@ -18,14 +18,13 @@ object Versions {
     private const val minor = 3
     private const val patch = 0
 
-    const val versionCode: Int = (major * 10000) + (minor * 100) + patch
     const val versionString: String = "$major.$minor.$patch"
 }
 
 object Libs {
     const val kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
-    const val app_compat_v7 = "com.android.support:appcompat-v7:${Versions.app_compat}"
-    const val constraint_layout = "com.android.support.constraint:constraint-layout:${Versions.constraint_layout}"
+    const val app_compat = "androidx.appcompat:appcompat:${Versions.app_compat}"
+    const val constraint_layout = "androidx.constraintlayout:constraintlayout:${Versions.constraint_layout}"
     const val junit = "junit:junit:${Versions.junit}"
     const val robolectric = "org.robolectric:robolectric:${Versions.robolectric}"
     const val rx_java_2 = "io.reactivex.rxjava2:rxjava:${Versions.rx_java_2}"

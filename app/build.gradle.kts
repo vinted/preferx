@@ -42,7 +42,7 @@ android {
 dependencies {
     implementation(project(":prefeRx"))
     implementation(Libs.kotlin_stdlib)
-    implementation(Libs.app_compat_v7)
+    implementation(Libs.app_compat)
     implementation(Libs.constraint_layout)
     implementation(Libs.dagger)
     implementation(Libs.rx_java_2)
