@@ -1,10 +1,10 @@
 package com.vinted.preferx
 
 import android.content.SharedPreferences
-import com.nhaarman.mockito_kotlin.mock
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.mockito.Mockito.*
+import org.mockito.kotlin.mock
 
 class EnumSerializerTest {
 

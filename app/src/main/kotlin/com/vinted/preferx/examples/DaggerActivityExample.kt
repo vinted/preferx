@@ -5,7 +5,6 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_dagger.*
 import javax.inject.Inject
 
-
 class DaggerActivityExample : Activity() {
 
     @Inject

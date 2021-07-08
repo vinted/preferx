@@ -2,7 +2,7 @@ package com.vinted.preferx.examples
 
 import com.vinted.preferx.examples.dagger.DaggerTestApplicationComponent
 import com.vinted.preferx.examples.dagger.TestApplicationComponent
-import com.vinted.android.preferences.dagger.TestPreferencesModule
+import com.vinted.preferx.examples.dagger.TestPreferencesModule
 
 class TestPrefApplication : PrefApplication() {
 

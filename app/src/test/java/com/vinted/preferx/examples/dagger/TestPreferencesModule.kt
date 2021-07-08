@@ -1,10 +1,10 @@
-package com.vinted.android.preferences.dagger
+package com.vinted.preferx.examples.dagger
 
-import com.nhaarman.mockito_kotlin.mock
-import com.vinted.preferx.examples.AppPreferences
 import com.vinted.preferx.IntPreference
+import com.vinted.preferx.examples.AppPreferences
 import dagger.Module
 import dagger.Provides
+import org.mockito.kotlin.mock
 import javax.inject.Singleton
 
 @Module

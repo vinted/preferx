@@ -1,12 +1,10 @@
 package com.vinted.preferx
 
 import android.content.SharedPreferences
-import com.nhaarman.mockito_kotlin.*
-import com.vinted.preferx.BasePreferenceImpl
-import com.vinted.preferx.Serializer
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
+import org.mockito.kotlin.*
 
 class BasePreferenceImplTest {
 
@@ -77,5 +75,4 @@ class BasePreferenceImplTest {
         assertFalse(isSet)
         verify(prefs).contains(key)
     }
-
 }
