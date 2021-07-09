@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:hint="Enter some text" />
+        android:hint="Enter some text"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/output"
