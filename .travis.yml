@@ -1,0 +1,15 @@
+language: android
+
+dist: trusty
+
+install: true
+
+jdk:
+  - oraclejdk8
+
+before_install:
+  - yes | sdkmanager "platforms;android-30"
+  - yes | sdkmanager "build-tools;30.0.2"
+
+script:
+  - ./gradlew build
