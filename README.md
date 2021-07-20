@@ -1,4 +1,5 @@
 [![](https://jitpack.io/v/com.vinted/preferx.svg)](https://jitpack.io/#com.vinted/preferx)
+[![Build Status](https://travis-ci.com/vinted/preferx.svg?branch=master)](https://travis-ci.com/vinted/preferx)
 
 # PrefeRx
 
@@ -12,7 +13,7 @@ Download
 
 ```groovy
 dependencies {
-  implementation 'com.vinted:preferx:1.2.0'
+  implementation 'com.vinted:preferx:<version>'
 }
 ```
 
@@ -122,7 +123,7 @@ License
 ```
 MIT License
 
-Copyright (c) 2019 Vinted UAB
+Copyright (c) 2021 Vinted UAB
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
