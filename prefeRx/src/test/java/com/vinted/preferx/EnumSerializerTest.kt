@@ -21,6 +21,8 @@ class EnumSerializerTest {
 
     @Test
     fun deserialize_noValue_defaultValue() {
+        // This test actually doesn't test that sharedpref returns default value because
+        // mock will always return 0
         val value = fixture.deserialize(sharedPref, "key", TestEnum.FOO)
 
         assertEquals(TestEnum.FOO, value)
