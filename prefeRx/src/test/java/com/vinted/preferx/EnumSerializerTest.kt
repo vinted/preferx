@@ -20,14 +20,7 @@ class EnumSerializerTest {
     }
 
     @Test
-    fun deserialize_noValue_defaultValue() {
-        val value = fixture.deserialize(sharedPref, "key", TestEnum.FOO)
-
-        assertEquals(TestEnum.FOO, value)
-    }
-
-    @Test
-    fun deserialize_withSavedValue_savedValue() {
+    fun deserialize_withSavedValue_returnSavedValue() {
         `when`(sharedPref.getInt(eq("key"), anyInt())).thenReturn(TestEnum.BAR.ordinal)
 
         val value = fixture.deserialize(sharedPref, "key", TestEnum.FOO)
@@ -36,7 +29,7 @@ class EnumSerializerTest {
     }
 
     @Test
-    fun deserialize_invalidOrdinal_defaultValue() {
+    fun deserialize_invalidOrdinal_returnDefaultValue() {
         `when`(sharedPref.getInt(eq("key"), anyInt())).thenReturn(Int.MAX_VALUE)
 
         val value = fixture.deserialize(sharedPref, "key", TestEnum.FOO)

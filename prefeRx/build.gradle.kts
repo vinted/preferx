@@ -72,4 +72,6 @@ dependencies {
     implementation(Libs.rx_java_2)
     testImplementation(Libs.junit)
     testImplementation(Libs.mockito_kotlin)
+    testImplementation(Libs.robolectric)
+    testImplementation(Libs.test_core)
 }
